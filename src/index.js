@@ -29,18 +29,39 @@ function formatDate(date) {
   dateAndTime.innerHTML = `<small>${currentDay}, ${currentMonth} ${currentDate}, ${currentHour}:${currentMinutes}</small>`;
 }
 
-function displayForecast() {
+
+function displayForecast(response) {
+  //let forecast = response.data.daily;
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = `
-    <div class="card-group">
-      <div class="minicard">
-          <h3>Tue</h3>        
-          <img src="" alt="" width="95" id="icon" />
-          <p><strong>22℃</strong> /16℃</p>
-      </div>
-    </div>
-  `
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+
+
+  let forecastHTML = `<div class="card-group">`;
+  days.forEach(function (day) {
+      forecastHTML =
+        forecastHTML + `
+          <div class="minicard">
+              <h3>${day}</h3>        
+              <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="75" />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max"> 19° </span>
+                <span class="weather-forecast-temperature-min"> 12° </span>
+            </div>
+          </div>
+      `;
+      });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "a643c3246f179fe06b62d492d58cf730";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function searchCity(city) {
@@ -88,6 +109,8 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+ getForecast(response.data.coord);
 }
 
 function convertToFahrenheit(event) {
@@ -138,7 +161,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celsiusTemperature = null;
 
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
@@ -146,4 +168,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Tokyo");
-displayForecast();

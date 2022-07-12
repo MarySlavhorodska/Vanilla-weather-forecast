@@ -69,7 +69,7 @@ p {
 }
 
 h2,
-h3 {
+.weather-forecast-temperature {
     color: #3e95d3;
 }
 
@@ -173,4 +173,8 @@ ul {
 .temperature {
     font-weight: 400;
     font-size: 46px;
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.5;
 }
