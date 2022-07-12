@@ -1,0 +1,176 @@
+.body-container {
+    border: 1px solid rgba(93, 109, 241, 0.2);
+    border-radius: 7px;
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    background: linear-gradient(67deg, #d558c8 0%, #24d292 100%);
+    max-width: 100%;
+    margin: 50px 50px;
+    display: block;
+    color: #b61fa7;
+}
+
+.footer-link {
+    padding: 15px;
+    display: block;
+    font-size: 19px;
+    color: #e2ebf0;
+}
+
+.footer-link1 {
+    color: #acd9f1;
+}
+
+.citycard {
+    max-width: 390px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    border: 50px;
+    border-radius: 6px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(8, 8, 8, 0.5);
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.minicard {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 40px;
+    border: 50px;
+    border-radius: 20px;
+    background: radial-gradient(328px at 2.9% 15%,
+            rgb(191, 224, 251) 0%,
+            rgb(232, 233, 251) 25.8%,
+            rgb(252, 239, 250) 50.8%,
+            rgb(234, 251, 251) 77.6%,
+            rgb(240, 251, 244) 100.7%);
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(8, 8, 8, 0.5);
+}
+
+.img {
+    max-height: 400px;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+}
+
+h1,
+p {
+    color: #0d3b74;
+}
+
+h2,
+h3 {
+    color: #3e95d3;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+small {
+    font-size: 30px;
+}
+
+.card-group {
+    margin: 30px;
+}
+
+i {
+    font-size: 75px;
+    color: #0c71ec;
+}
+
+.searching {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+}
+
+.but10 {
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+
+input {
+    color: rgb(202, 220, 235);
+    border-radius: 7px;
+    border-color: rgb(102, 6, 88);
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    background-color: transparent;
+    font-size: 25px;
+    transition: all 150ms ease-in-out;
+}
+
+input:hover {
+    background-color: whitesmoke;
+    color: violet;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+hr {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 30px;
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 20px;
+    font-size: 21px;
+}
+
+.maxmintemp {
+    display: block;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-block-end: 16px;
+    margin-block-start: 16px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    padding: 0;
+    text-align: center;
+}
+
+.maxmin {
+    display: inline;
+    margin: 0 5px;
+    text-align: -webkit-match-parent;
+}
+
+#maxtemp {
+    color: #7e0371;
+}
+#mintemp {
+    color: #d459c8;
+}
+
+.units {
+    font-size: 20px;
+    position: relative;
+    top: -13px;
+    color: #0d3b74;
+    margin-left: 0px;
+}
+
+.temperature {
+    font-weight: 400;
+    font-size: 46px;
+}

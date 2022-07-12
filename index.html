@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100;200;300;400;500&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
+            rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/319253c18a.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <title>My first weather app</title>
+        <link rel="stylesheet" href="src/styles.css" />
+    </head>
+
+    <body>
+        <div class="body-container">
+            <div class="searching">
+                <form id="search-form">
+                    <input type="text" placeholder="Type your city" id="enter-city" autocomplete="off" />
+                    <input type="submit" value="Search" />
+                    <input type="submit" value="Current" id="current-location-button" />
+                </form>
+            </div>
+
+            <img src="src/weath.svg" alt="weatherpic" class="img"/>
+
+            <div class="citycard">
+                <h1 id="city-location">Kyiv</h1>
+                <span id="country"></span>
+                <h2>
+                    <div>
+                        <span class="temperature" id="temperature">19</span>
+                        <span class="units">
+                            <a href="#" id="celsius-link" class="active">°C</a> |
+                            <a href="#" id="fahrenheit-link">°F</a>
+                        </span>
+                    </div>
+                </h2>
+                <div id="date-and-time">
+                    <small>Tue, April 26th | 18:53</small>
+                </div>
+                <div>
+                    <ul>
+                        <li class="description" id="description">cloudy</li>
+                        <ul class="maxmintemp">
+                            <li class="maxmin"><strong><span id="maxtemp"></span>℃</strong></li>
+                            <li class="maxmin"><span id="mintemp"></span>℃</li>
+                        </ul>
+                        <li><img src="" alt="" width="140" id="icon" /></li>
+                        <li>Humidity: <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="weather-forecast" id="forecast"></div>
+            <hr />
+
+            <div class="but10">
+                <button type="button" class="btn btn-outline-light btn-lg">
+                    Next 10 days
+                </button>
+                <button type="button" class="btn btn-outline-light btn-lg">
+                    Next month
+                </button>
+            </div>
+            <hr />
+            <small class="footer-link">This project was coded <a href="https://www.linkedin.com/in/maria-slavgorodskaya-b0a25b198/" target="_blank" class="footer-link1"> by Mary Slavhorodska</a>
+            and <a href="https://github.com/MarySlavhorodska/weather-project" target="_blank" class="footer-link1">open-source code in GitHub</a>
+            </small>
+        </div>
+        
+        <script src="src/index.js"></script>
+    </body>
+
+</html>
