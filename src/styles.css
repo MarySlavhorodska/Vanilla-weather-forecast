@@ -3,8 +3,8 @@
     border-radius: 7px;
     font-family: "Tiro Devanagari Sanskrit", serif;
     background: linear-gradient(67deg, #d558c8 0%, #24d292 100%);
-    max-width: 100%;
-    margin: 50px 50px;
+    width: 750px;
+    margin: 0 auto;
     display: block;
     color: #b61fa7;
 }
@@ -28,7 +28,7 @@
     padding: 20px 20px;
     border: 50px;
     border-radius: 6px;
-    background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);    
+    background: linear-gradient(to top, #d299c2 10%, #fef9d7 100%);    
     font-family: "Tiro Devanagari Sanskrit", serif;
     text-align: center;
     box-shadow: 10px 10px 20px rgba(8, 8, 8, 0.5);
@@ -60,14 +60,6 @@ a {
     box-shadow: 10px 10px 20px rgba(131, 6, 6, 0.5);
 }
 
-
-
-.img {
-    max-height: 400px;
-    position: absolute;
-    top: 45px;
-    right: 15px;
-}
 
 h1 {
     color: #0d3b74;
@@ -138,13 +130,11 @@ ul {
 
 .maxmintemp {
     display: block;
+    font-size: 29px;
     list-style-image: none;
     list-style-position: outside;
     list-style-type: none;
-    margin-block-end: 16px;
-    margin-block-start: 16px;
-    margin-inline-end: 0px;
-    margin-inline-start: 0px;
+    margin: 16px 0 0;
     padding: 0;
     text-align: center;
 }

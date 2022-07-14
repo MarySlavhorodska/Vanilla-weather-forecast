@@ -42,7 +42,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="card-group">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 7) {
+    if (index < 8) {
       forecastHTML =
         forecastHTML + `
           <div class="minicard">
