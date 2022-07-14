@@ -3,7 +3,8 @@
     border-radius: 7px;
     font-family: "Tiro Devanagari Sanskrit", serif;
     background: linear-gradient(67deg, #d558c8 0%, #24d292 100%);
-    width: 750px;
+    max-width: 750px;
+    min-width: 300px;
     margin: 0 auto;
     display: block;
     color: #b61fa7;
